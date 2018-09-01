@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MenuComponent from './Menu';
-import Books from './Book'
+import Books from './books/books'
 
 class App extends Component {
   render() {

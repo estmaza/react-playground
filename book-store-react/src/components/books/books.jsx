@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import http from '../core/http'
+import { service } from './service'
 
 class Books extends Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class Books extends Component {
   }
 
   componentDidMount() {
-    http.Books.all()
+    service.all()
       .then((result) => {
         this.setState({
           isLoaded: true,

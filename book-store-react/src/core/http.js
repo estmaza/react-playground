@@ -1,6 +1,6 @@
 import { API_URL } from './config'
 
-const requests = {
+export const http = {
   del: url =>
     fetch(`${API_URL}${url}`, {
       method: 'DELETE',
@@ -32,15 +32,4 @@ const requests = {
       }),
       credentials: 'include'
     }).then(res => res.json())
-};
-
-const Books = {
-  all: () =>
-    requests.get('/books'),
-  get: (id) =>
-    requests.get(`/books/${id}`)
-}
-
-export default {
-  Books
 };
