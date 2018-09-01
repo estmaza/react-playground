@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import http from '../http'
+import http from '../core/http'
 
-class Books extends React.Component {
+class Books extends Component {
   constructor(props) {
     super(props);
     this.state = {

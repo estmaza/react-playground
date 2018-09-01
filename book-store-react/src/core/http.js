@@ -1,8 +1,8 @@
-const API_ROOT = 'https://localhost:44340/api';
+import { API_URL } from './config'
 
 const requests = {
   del: url =>
-    fetch(`${API_ROOT}${url}`, {
+    fetch(`${API_URL}${url}`, {
       method: 'DELETE',
       headers: new Headers({
         'Content-Type': 'application/json'
@@ -11,10 +11,10 @@ const requests = {
     }).then(res => res.json()),
 
   get: url =>
-    fetch(`${API_ROOT}${url}`).then(res => res.json()),
+    fetch(`${API_URL}${url}`).then(res => res.json()),
 
   put: (url, data) =>
-    fetch(`${API_ROOT}${url}`, {
+    fetch(`${API_URL}${url}`, {
       body: JSON.stringify(data),
       method: 'PUT',
       headers: new Headers({
@@ -24,7 +24,7 @@ const requests = {
     }).then(res => res.json()),
 
   post: (url, data) =>
-    fetch(`${API_ROOT}${url}`, {
+    fetch(`${API_URL}${url}`, {
       body: JSON.stringify(data),
       method: 'POST',
       headers: new Headers({
